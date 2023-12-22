@@ -9,7 +9,7 @@ const Comments = () => {
         <div className="details">
           <p className="detailsdescription">✉️: tejababu08@gmail.com</p>
           <p className="detailsdescription">📞: 6304390656</p>
-          <p className="detailsdescription">🏠: Andhra Pradesh,India</p>
+          <p className="detailsdescription">🏠: ATP,Andhra Pradesh,India</p>
         </div>
         <img
           alt="profile"
