@@ -1,5 +1,5 @@
 // Write your code here.
-import {Component} from 'react';
+import { Component } from 'react';
 import './index.css';
 
 const PLUS_IMAGE =
@@ -8,18 +8,18 @@ const MINUS_IMAGE =
   'https://assets.ccbp.in/frontend/react-js/faqs-minus-icon-img.png';
 
 class FaqItem extends Component {
-  state = {isActive: false};
+  state = { isActive: false };
 
   onToggleIsActive = () => {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isActive: !prevState.isActive,
     }));
   };
 
   renderAnswer = () => {
-    const {isActive} = this.state;
-    const {faqDetails} = this.props;
-    const {answerText} = faqDetails;
+    const { isActive } = this.state;
+    const { faqDetails } = this.props;
+    const { answerText } = faqDetails;
     if (isActive) {
       return (
         <div>
@@ -32,7 +32,7 @@ class FaqItem extends Component {
   };
 
   renderActiveImage = () => {
-    const {isActive} = this.state;
+    const { isActive } = this.state;
     const image = isActive ? MINUS_IMAGE : PLUS_IMAGE;
     const altText = isActive ? 'minus' : 'plus';
 
@@ -44,9 +44,9 @@ class FaqItem extends Component {
   };
 
   render() {
-    const {isActive} = this.state;
-    const {faqDetails} = this.props;
-    const {questionText} = faqDetails;
+    const { isActive } = this.state;
+    const { faqDetails } = this.props;
+    const { questionText } = faqDetails;
 
     console.log('isActive:', isActive);
     return (

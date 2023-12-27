@@ -1,8 +1,8 @@
 import './index.css';
 
-const ProjectItem = props => {
-  const {projectDetails} = props;
-  const {projectId, imageURL, description, title, link} = projectDetails;
+const ProjectItem = (props) => {
+  const { projectDetails } = props;
+  const { projectId, imageURL, description, title, link } = projectDetails;
   return (
     <>
       <li className="project-item-container">

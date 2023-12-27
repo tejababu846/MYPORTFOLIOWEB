@@ -11,8 +11,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  background-image: url('https://media.istockphoto.com/id/1337668467/vector/modern-rainbow-glow-backlight-frame.jpg?s=612x612&w=0&k=20&c=xbuNlYJsMRHstRLRkJyAW_eDaYLE6sXjQoFFo1tmFSo=');
+  background-image: url('https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg?w=996&t=st=1703682688~exp=1703683288~hmac=0bc3301f14961b1b3543d2d46bdef717dc105280962c44f563a2baa676a20570');
   background-size: cover;
+  overflow-x: hidden;
 }
 
 html {
@@ -34,6 +35,7 @@ html {
 .card-image {
   height: 70px;
   width: 60px;
+  margin-top:15px;
 }
 
 .card-container {
@@ -69,7 +71,7 @@ html {
   display:flex;
   align-items:center;
   flex-direction:column;
-  background-image: url('https://media.istockphoto.com/id/1337668467/vector/modern-rainbow-glow-backlight-frame.jpg?s=612x612&w=0&k=20&c=xbuNlYJsMRHstRLRkJyAW_eDaYLE6sXjQoFFo1tmFSo=');
+  background-image: url('https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg?w=996&t=st=1703682688~exp=1703683288~hmac=0bc3301f14961b1b3543d2d46bdef717dc105280962c44f563a2baa676a20570');
   background-size: cover;
 }
 .QandAcontainer {
@@ -167,4 +169,43 @@ html {
     font-size: 18px;
     margin-top: 20px; /* Adjust the top margin for larger screens */
   }
+}
+
+.educationdetails {
+  max-width:1000px;
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+  gap:1rem
+}
+
+@media screen and (max-width: 768px) {
+  .educationdetails {
+    grid-template-columns: 1fr;
+  }.STUDIESCARD {
+    margin-left:50px;
+  }
+}
+
+.skilsone {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.STUDIESCARD {
+  flex-direction:column;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  line-height:2px;
+}
+
+.Educationheading {
+  text-align:center;
+  color:wheat;
 }

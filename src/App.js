@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component} from 'react';
+import { Component } from 'react';
 import Faqs from './components/Faqs';
 import TabItem from './components/TabItem';
 import ProjectItem from './components/ProjectItem';
@@ -39,10 +39,10 @@ const faqsList = [
 ];
 
 const tabsList = [
-  {tabId: 'STATIC', displayText: 'Static'},
-  {tabId: 'RESPONSIVE', displayText: 'Responsive'},
-  {tabId: 'DYNAMIC', displayText: 'Dynamic'},
-  {tabId: 'REACTJS', displayText: 'Reactjs'},
+  { tabId: 'STATIC', displayText: 'Static' },
+  { tabId: 'RESPONSIVE', displayText: 'Responsive' },
+  { tabId: 'DYNAMIC', displayText: 'Dynamic' },
+  { tabId: 'REACTJS', displayText: 'Reactjs' },
 ];
 
 const projectsList = [
@@ -196,6 +196,36 @@ const projectsList = [
     description:
       'The Password Manager application ensures seamless password management, allowing you to securely store and retrieve passwords when needed.',
   },
+  {
+    link: 'https://tejajobappone.ccbp.tech/',
+    projectId: 17,
+    category: 'REACTJS',
+    imageURL:
+      'https://assets.ccbp.in/frontend/content/react-js/jobby-app-jobs-success-lg-output-v0.png',
+    title: 'JOBBY APP',
+    description:
+      'The Job Search Application is a powerful tool designed to streamline and enhance the job-seeking process. This application goes beyond traditional job boards.for login go to tejababu846',
+  },
+  {
+    link: 'https://tejashoping03.ccbp.tech/',
+    projectId: 18,
+    category: 'REACTJS',
+    imageURL:
+      'https://assets.ccbp.in/frontend/react-js/nxt-trendz-login-img.png',
+    title: 'E-Commerce App',
+    description:
+      'The E-commerce Application stands as a robust platform meticulously crafted to provide a seamless and enriching online shopping experience. To login USERNAME:rahul PASSWORD:rahul@2021',
+  },
+  {
+    link: 'https://tejaprimevideo1.ccbp.tech/',
+    projectId: 19,
+    category: 'REACTJS',
+    imageURL:
+      'https://assets.ccbp.in/frontend/react-js/prime-video-img.png',
+    title: 'Carosal Sample',
+    description:
+      'By using node pakage manager this application is using carosal to display the things we want and also play the video using react-player',
+  },
 ];
 
 class App extends Component {
@@ -203,15 +233,15 @@ class App extends Component {
     activeTabId: tabsList[0].tabId,
   };
 
-  updateActiveTabId = tabId => {
-    this.setState({activeTabId: tabId});
+  updateActiveTabId = (tabId) => {
+    this.setState({ activeTabId: tabId });
   };
 
   getFilteredProjects = () => {
-    const {activeTabId} = this.state;
+    const { activeTabId } = this.state;
 
     const filterdProjects = projectsList.filter(
-      eachProjectDetails => eachProjectDetails.category === activeTabId,
+      (eachProjectDetails) => eachProjectDetails.category === activeTabId,
     );
 
     return filterdProjects;
@@ -219,58 +249,96 @@ class App extends Component {
 
   render() {
     const filterdProjects = this.getFilteredProjects();
-    const {activeTabId} = this.state;
+    const { activeTabId } = this.state;
 
     return (
-      <div className="app-container">
+      <>
         <Header />
-        <h1 className='headintop'>Portfolio</h1>
-        <Comments />
-        <h1 className="title">My Projects</h1>
-        <p className="description">
-          Your skills and achievements showcase your strengths and abilities.
-          Speak about any new skills or software you learnt to perform the
-          project responsibilities.
-        </p>
-        <ul className="tabs-container">
-          {tabsList.map(tabDetails => (
-            <TabItem
-              key={tabDetails.tabId}
-              tabDetails={tabDetails}
-              updateActiveTabId={this.updateActiveTabId}
-              isActive={tabDetails.tabId === activeTabId}
-            />
-          ))}
-        </ul>
-        <ul className="project-list-container">
-          {filterdProjects.map(projectDetails => (
-            <ProjectItem
-              key={projectDetails.projectId}
-              projectDetails={projectDetails}
-            />
-          ))}
-        </ul>
-        <div className="cardContainer">
-          <div className="col-12 col-md-4">
-            <div className="card-container p-3 mb-3">
-              <img
-                className="card-image"
-                src="https://img.freepik.com/free-vector/student-boy-holding-empty-board-cartoon-sticker_1308-60415.jpg?w=2000"
-                alt="Aboutmeimage"
+        <div className="app-container">
+          <h1 className="headintop">Portfolio</h1>
+          <Comments />
+          <h1 className="title">My Projects</h1>
+          <p className="description">
+            Your skills and achievements showcase your strengths and abilities.
+            Speak about any new skills or software you learnt to perform the
+            project responsibilities.
+          </p>
+          <ul className="tabs-container">
+            {tabsList.map((tabDetails) => (
+              <TabItem
+                key={tabDetails.tabId}
+                tabDetails={tabDetails}
+                updateActiveTabId={this.updateActiveTabId}
+                isActive={tabDetails.tabId === activeTabId}
               />
-              <h1 className="card-heading">About Me</h1>
-              <p className="card-description">
-              👋 Hi, I'm Teja Gulagani, an aspiring frontend developer with a strong foundation in HTML, CSS, and JavaScript. Currently a student, I'm passionate about creating user-friendly interfaces and staying updated on the latest industry trends. A fast learner and team player, I bring a positive mindset and adaptability to collaborative projects. Eager to contribute my skills to innovative web development opportunities, I can be contacted at tejababu08@gmail.com. Let's code a brighter future together! 💻✨
-              </p>
+            ))}
+          </ul>
+          <ul className="project-list-container">
+            {filterdProjects.map((projectDetails) => (
+              <ProjectItem
+                key={projectDetails.projectId}
+                projectDetails={projectDetails}
+              />
+            ))}
+          </ul>
+          <div className="cardContainer">
+            <div className="col-12 col-md-4">
+              <div className="card-container p-3 mb-3">
+                <img
+                  className="card-image"
+                  src="https://img.freepik.com/free-vector/student-boy-holding-empty-board-cartoon-sticker_1308-60415.jpg?w=2000"
+                  alt="Aboutmeimage"
+                />
+                <h1 className="card-heading">About Me</h1>
+                <p className="card-description">
+                  👋 Hi, I'm Teja Gulagani, an aspiring frontend developer with
+                  a strong foundation in HTML, CSS, and JavaScript. Currently a
+                  student, I'm passionate about creating user-friendly
+                  interfaces and staying updated on the latest industry trends.
+                  A fast learner and team player, I bring a positive mindset and
+                  adaptability to collaborative projects. Eager to contribute my
+                  skills to innovative web development opportunities, I can be
+                  contacted at <a href="/">tejababu08@gmail.com.</a>Let's code a brighter
+                  future together! 💻✨
+                </p>
+              </div>
+              <h1 className='Educationheading'>EDUCATION DETAILS</h1>
+              <div className='skilsone'>
+                <div className='educationdetails'>
+                  <div className='STUDIESCARD'>
+                    <h1 className='Educationheading'>NXTWAVE 2.0</h1>
+                    <p className='Educationheading'>2023</p>
+                    <p className='Educationheading'>JAN-10 TO DEC-31</p>
+                  </div>
+                  <div className='STUDIESCARD'>
+                    <h1 className='Educationheading'>GRADUATION</h1>
+                    <p className='Educationheading'>2018-2021</p>
+                    <p className='Educationheading'>SSBN DEGREE & PG COLLEGE</p>
+                    <p className='Educationheading'>Percentage:73%</p>
+                  </div>
+                  <div className='STUDIESCARD'>
+                    <h1 className='Educationheading'>INTERMIDIATE</h1>
+                    <p className='Educationheading'>2016-2018</p>
+                    <p className='Educationheading'>SRI CHITANYA JR.COLLEGE</p>
+                    <p className='Educationheading'>Percentage:60%</p>
+                  </div>
+                  <div className='STUDIESCARD'>
+                    <h1 className='Educationheading'>CLASS-X</h1>
+                    <p className='Educationheading'>2016</p>
+                    <p className='Educationheading'>SSS MOKSHIT HIGH SCHOOL</p>
+                    <p className='Educationheading'>Percentage:73%</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <CommentItem />
+          <hr className="horizontalline" />
+          <div className="QandAcontainer">
+            <Faqs faqsList={faqsList} />
+          </div>
         </div>
-        <CommentItem />
-        <hr className="horizontalline" />
-        <div className="QandAcontainer">
-          <Faqs faqsList={faqsList} />
-        </div>
-      </div>
+      </>
     );
   }
 }

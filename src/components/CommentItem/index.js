@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './index.css';
 
 const CommentItem = () => {
@@ -13,15 +13,16 @@ const CommentItem = () => {
     'https://res.cloudinary.com/learning-platform/image/fetch/dpr_auto,w_auto,f_auto,q_auto/https%3A%2F%2Fs3-ap-south-1.amazonaws.com%2Fnkb-backend-ccbp-media-static%2Fcertificates%2Fshare%2FOHOXHZPRYV.png',
     'https://res.cloudinary.com/learning-platform/image/fetch/dpr_auto,w_auto,f_auto,q_auto/https%3A%2F%2Fs3-ap-south-1.amazonaws.com%2Fnkb-backend-ccbp-media-static%2Fcertificates%2Fshare%2FVNELUPGWJB.png',
     'https://res.cloudinary.com/learning-platform/image/fetch/dpr_auto,w_auto,f_auto,q_auto/https%3A%2F%2Fs3-ap-south-1.amazonaws.com%2Fnkb-backend-ccbp-media-static%2Fcertificates%2Fshare%2FNHWSDXKNWA.png',
+    'https://media-content.ccbp.in/certificates/share/GUQWKGQIOK.png',
   ];
 
   const handleNextButtonClick = () => {
-    setCurrentImageIndex(prevIndex => (prevIndex + 1) % images.length);
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   const handlePrevButtonClick = () => {
     setCurrentImageIndex(
-      prevIndex => (prevIndex - 1 + images.length) % images.length,
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length,
     );
   };
 
