@@ -48,7 +48,7 @@ class FaqItem extends Component {
     const { faqDetails } = this.props;
     const { questionText } = faqDetails;
 
-    console.log('isActive:', isActive);
+    
     return (
       <li className="faq-item">
         <div className="question-container">

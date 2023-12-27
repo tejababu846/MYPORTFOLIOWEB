@@ -23,7 +23,7 @@
     "eject": "react-scripts eject",
     "eslint": "eslint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -b gh-pages"
+    "deploy": "gh-pages -d build -b main"
   },
   "eslintConfig": {
     "extends": [
@@ -52,7 +52,7 @@
     "eslint": "^8.56.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-react": "^7.33.2",
-    "gh-pages": "^6.1.0",
+    "gh-pages": "^6.1.1",
     "typescript": "^5.3.3"
   }
 }
